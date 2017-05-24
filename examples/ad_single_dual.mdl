@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.2"
+    ComputedModelVersion    "1.3"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -58,7 +58,7 @@ Model {
 	$PropName		"ExplorerBarInfo"
 	$ObjectID		4
 	$ClassName		"Simulink.ExplorerBarInfo"
-	Visible			[1]
+	Visible			[0]
       }
       Object {
 	$PropName		"EditorsInfo"
@@ -67,9 +67,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[944.0, 719.0]
+	Extents			[944.0, 749.0]
 	ZoomFactor		[1.0]
-	Offset			[0.0, 0.0]
+	Offset			[-193.234375, 0.0]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -103,9 +103,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "torsten"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri May 19 15:37:35 2017"
-  RTWModifiedTimeStamp	  417108984
-  ModelVersionFormat	  "1.%<AutoIncrement:2>"
+  LastModifiedDate	  "Wed May 24 13:33:05 2017"
+  RTWModifiedTimeStamp	  417533582
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -959,6 +959,19 @@ Model {
       NonVirtualBus	      off
     }
     Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
       BlockType		      Display
       Format		      "short"
       Decimation	      "10"
@@ -984,36 +997,36 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "8"
+    SIDHighWatermark	    "15"
     Block {
       BlockType		      Reference
-      Name		      "Analog Input\n(Single Value)"
-      SID		      "4"
-      Ports		      [0, 1]
-      Position		      [230, 95, 340, 155]
-      ZOrder		      17
-      LibraryVersion	      "1.6"
-      SourceBlock	      "MAIv2DAQ/Analog Input\n(Single Value)"
-      SourceType	      "SubSystem"
-      ContentPreviewEnabled   off
+      Name		      "Analog Input \n(Single Value)"
+      SID		      "9"
+      Ports		      [5, 1]
+      Position		      [170, 69, 280, 141]
+      ZOrder		      22
+      LibraryVersion	      "1.16"
+      SourceBlock	      "MAIv2DAQ/Analog Input/Analog Input \n(Single Value)"
+      SourceType	      "Analog Input (Single Value)"
+      Device		      "0"
+      Channel		      "0"
+      Oversampling	      "disable"
+      Gain		      "1"
     }
     Block {
       BlockType		      Reference
-      Name		      "Analog Input\n(Single Value)1"
-      SID		      "5"
-      Ports		      [0, 1]
-      Position		      [230, 215, 340, 275]
-      ZOrder		      18
-      LibraryVersion	      "1.6"
-      LinkData {
-	BlockName		"Analog Input \n(Single Value)"
-	DialogParameters {
-	  Channel		  "1"
-	}
-      }
-      SourceBlock	      "MAIv2DAQ/Analog Input\n(Single Value)"
-      SourceType	      "SubSystem"
-      ContentPreviewEnabled   off
+      Name		      "Analog Input \n(Single Value)1"
+      SID		      "10"
+      Ports		      [5, 1]
+      Position		      [170, 209, 280, 281]
+      ZOrder		      23
+      LibraryVersion	      "1.16"
+      SourceBlock	      "MAIv2DAQ/Analog Input/Analog Input \n(Single Value)"
+      SourceType	      "Analog Input (Single Value)"
+      Device		      "0"
+      Channel		      "0"
+      Oversampling	      "disable"
+      Gain		      "1"
     }
     Block {
       BlockType		      BusCreator
@@ -1028,27 +1041,65 @@ Model {
       InheritFromInputs	      on
     }
     Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "11"
+      Position		      [-95, 25, -65, 55]
+      ZOrder		      24
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant1"
+      SID		      "12"
+      Position		      [-15, 160, 15, 190]
+      ZOrder		      25
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      SID		      "13"
+      Position		      [-15, 260, 15, 290]
+      ZOrder		      26
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant3"
+      SID		      "14"
+      Position		      [-95, 215, -65, 245]
+      ZOrder		      27
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant4"
+      SID		      "15"
+      Position		      [-95, 75, -65, 105]
+      ZOrder		      28
+      Value		      "0"
+    }
+    Block {
       BlockType		      Display
       Name		      "Display"
       SID		      "2"
       Ports		      [1]
-      Position		      [615, 110, 705, 150]
+      Position		      [615, 145, 705, 185]
       ZOrder		      16
       Decimation	      "2"
     }
     Line {
-      ZOrder		      10
-      SrcBlock		      "Analog Input\n(Single Value)"
+      ZOrder		      14
+      SrcBlock		      "Analog Input \n(Single Value)"
       SrcPort		      1
-      Points		      [73, 0; 0, 30]
+      Points		      [103, 0; 0, 50]
       DstBlock		      "Bus\nCreator"
       DstPort		      1
     }
     Line {
-      ZOrder		      11
-      SrcBlock		      "Analog Input\n(Single Value)1"
+      ZOrder		      13
+      SrcBlock		      "Analog Input \n(Single Value)1"
       SrcPort		      1
-      Points		      [73, 0; 0, -70]
+      Points		      [103, 0; 0, -70]
       DstBlock		      "Bus\nCreator"
       DstPort		      2
     }
@@ -1056,9 +1107,92 @@ Model {
       ZOrder		      12
       SrcBlock		      "Bus\nCreator"
       SrcPort		      1
-      Points		      [53, 0; 0, -35]
       DstBlock		      "Display"
       DstPort		      1
+    }
+    Line {
+      ZOrder		      15
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [160, 0; 0, 35]
+      Branch {
+	ZOrder			18
+	Points			[0, 140]
+	DstBlock		"Analog Input \n(Single Value)1"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			16
+	DstBlock		"Analog Input \n(Single Value)"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      19
+      SrcBlock		      "Constant1"
+      SrcPort		      1
+      Points		      [41, 0]
+      Branch {
+	ZOrder			23
+	Points			[0, 70]
+	Branch {
+	  ZOrder		  25
+	  Points		  [0, 15]
+	  DstBlock		  "Analog Input \n(Single Value)1"
+	  DstPort		  4
+	}
+	Branch {
+	  ZOrder		  24
+	  DstBlock		  "Analog Input \n(Single Value)1"
+	  DstPort		  3
+	}
+      }
+      Branch {
+	ZOrder			22
+	Points			[0, -55]
+	Branch {
+	  ZOrder		  21
+	  DstBlock		  "Analog Input \n(Single Value)"
+	  DstPort		  4
+	}
+	Branch {
+	  ZOrder		  20
+	  Points		  [0, -15]
+	  DstBlock		  "Analog Input \n(Single Value)"
+	  DstPort		  3
+	}
+      }
+    }
+    Line {
+      ZOrder		      26
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      Points		      [20, 0]
+      Branch {
+	ZOrder			28
+	DstBlock		"Analog Input \n(Single Value)1"
+	DstPort			5
+      }
+      Branch {
+	ZOrder			27
+	Points			[0, -140]
+	DstBlock		"Analog Input \n(Single Value)"
+	DstPort			5
+      }
+    }
+    Line {
+      ZOrder		      29
+      SrcBlock		      "Constant3"
+      SrcPort		      1
+      DstBlock		      "Analog Input \n(Single Value)1"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      30
+      SrcBlock		      "Constant4"
+      SrcPort		      1
+      DstBlock		      "Analog Input \n(Single Value)"
+      DstPort		      2
     }
   }
 }
