@@ -1,17 +1,36 @@
-Library {
-  Name			  "MAIv2DAQ"
+Model {
+  Name			  "ad_block"
   Version		  8.9
   SavedCharacterEncoding  "windows-1252"
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.3"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+    NumProvidedFunctions    0
+    NumRequiredFunctions    0
+    NumResetEvents	    0
+    HasInitializeEvent	    0
+    HasTerminateEvent	    0
+    IsExportFunctionModel   0
+    NumParameterArguments   0
+    OrderedModelArguments   1
+  }
   LogicAnalyzerGraphicalSettings ""
   LogicAnalyzerPlugin	  "on"
   LogicAnalyzerSignalOrdering ""
   DiagnosticSuppressor	  "on"
   SuppressorTable	  "22 serialization::archive 11 0 6 0 0 0 8 0"
   SLCCPlugin		  "on"
-  LibraryType		  "BlockLibrary"
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
   DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
   LastSavedArchitecture	  "win64"
@@ -19,136 +38,78 @@ Library {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
     $ClassName		    "Simulink.BDWindowsInfo"
-    Array {
-      Type		      "Simulink.WindowInfo"
-      Dimension		      2
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [2149.0, 67.0, 1215.0, 824.0]
       Object {
-	$ObjectID		2
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[0]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	Location		[-8.0, -8.0, 1936.0, 1066.0]
-	Object {
-	  $PropName		  "ModelBrowserInfo"
-	  $ObjectID		  3
-	  $ClassName		  "Simulink.ModelBrowserInfo"
-	  Visible		  [1]
-	  DockPosition		  "Left"
-	  Width			  [50]
-	  Height		  [50]
-	  Filter		  [59]
-	}
-	Object {
-	  $PropName		  "ExplorerBarInfo"
-	  $ObjectID		  4
-	  $ClassName		  "Simulink.ExplorerBarInfo"
-	  Visible		  [0]
-	}
-	Object {
-	  $PropName		  "EditorsInfo"
-	  $ObjectID		  5
-	  $ClassName		  "Simulink.EditorInfo"
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "5"
-	  Extents		  [1689.0, 923.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [-10.90625, 0.0]
-	}
-	Object {
-	  $PropName		  "DockComponentsInfo"
-	  $ObjectID		  6
-	  $ClassName		  "Simulink.DockComponentInfo"
-	  Type			  "GLUE2:PropertyInspector"
-	  ID			  "Property Inspector"
-	  Visible		  [0]
-	  CreateCallback	  ""
-	  UserData		  ""
-	  Floating		  [0]
-	  DockPosition		  "Right"
-	  Width			  [640]
-	  Height		  [480]
-	}
-	WindowState		"AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAADtvwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wA"
-	"AABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQA"
-	"LwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQBAAAAOAAAA7YAAABjAP///wAAAAEAAAAAAAAAAPwCAAAAAfsAAABUAEcATABVA"
-	"EUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AA"
-	"AAKwD///8AAAa/AAADtgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/////wEAAAAA/////wAAAAAAAAAA///"
-	"//wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAB5/////wAAAAAAAAAA/////wEA"
-	"AADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/"
-	"////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAEo/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////w"
-	"AAAAAAAAAA"
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1161.0, 673.0]
+	ZoomFactor		[1.25]
+	Offset			[191.60476190476231, -16.341076524768944]
       }
       Object {
-	$ObjectID		7
-	IsActive		[0]
-	Location		[-8.0, -8.0, 1936.0, 1066.0]
-	Object {
-	  $PropName		  "ModelBrowserInfo"
-	  $ObjectID		  8
-	  $ClassName		  "Simulink.ModelBrowserInfo"
-	  Visible		  [1]
-	  DockPosition		  "Left"
-	  Width			  [50]
-	  Height		  [50]
-	  Filter		  [59]
-	}
-	Object {
-	  $PropName		  "ExplorerBarInfo"
-	  $ObjectID		  9
-	  $ClassName		  "Simulink.ExplorerBarInfo"
-	  Visible		  [0]
-	}
-	Object {
-	  $PropName		  "EditorsInfo"
-	  $ObjectID		  10
-	  $ClassName		  "Simulink.EditorInfo"
-	  IsActive		  [1]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "5"
-	  Extents		  [1689.0, 923.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [-10.90625, 0.0]
-	}
-	Object {
-	  $PropName		  "DockComponentsInfo"
-	  $ObjectID		  11
-	  $ClassName		  "Simulink.DockComponentInfo"
-	  Type			  "GLUE2:PropertyInspector"
-	  ID			  "Property Inspector"
-	  Visible		  [0]
-	  CreateCallback	  ""
-	  UserData		  ""
-	  Floating		  [0]
-	  DockPosition		  "Right"
-	  Width			  [640]
-	  Height		  [480]
-	}
-	WindowState		"AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAADtvwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wA"
-	"AABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQA"
-	"LwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQBAAAAOAAAA7YAAABjAP///wAAAAEAAAAAAAAAAPwCAAAAAfsAAABUAEcATABVA"
-	"EUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZQBjAHQAbwByAAAAAAD/////AA"
-	"AAKwD///8AAAa/AAADtgAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/////wEAAAAA/////wAAAAAAAAAA///"
-	"//wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAB5/////wAAAAAAAAAA/////wEA"
-	"AADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/"
-	"////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAEo/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////w"
-	"AAAAAAAAAA"
+	$PropName		"DockComponentsInfo"
+	$ObjectID		6
+	$ClassName		"Simulink.DockComponentInfo"
+	Type			"GLUE2:PropertyInspector"
+	ID			"Property Inspector"
+	Visible			[0]
+	CreateCallback		""
+	UserData		""
+	Floating		[0]
+	DockPosition		"Right"
+	Width			[640]
+	Height			[480]
       }
-      PropName		      "WindowsInfo"
+      WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
+      "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
+      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
+      "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
+      "QBjAHQAbwByAAAAAAD/////AAAAKwD///8AAASvAAACvAAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
+      "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
+      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAMr/////wAAAAAAAAAA/"
+      "////wEAAANa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
     }
   }
-  HideAutomaticNames	  off
-  Created		  "Fri May 19 14:11:08 2017"
-  Creator		  "Support"
+  HideAutomaticNames	  on
+  Created		  "Wed May 24 10:28:13 2017"
+  Creator		  "torsten"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "torsten"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed May 24 10:27:53 2017"
-  RTWModifiedTimeStamp	  417522470
-  ModelVersionFormat	  "1.%<AutoIncrement:16>"
+  LastModifiedDate	  "Wed May 24 13:25:46 2017"
+  RTWModifiedTimeStamp	  417533101
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
-  LibraryLinkDisplay	  "user"
+  LibraryLinkDisplay	  "disabled"
   WideLines		  off
   ShowLineDimensions	  off
   ShowPortDataTypes	  off
@@ -175,9 +136,9 @@ Library {
   BlockDescriptionStringDataTip	off
   ToolBar		  on
   StatusBar		  on
-  BrowserShowLibraryLinks on
+  BrowserShowLibraryLinks off
   FunctionConnectors	  off
-  BrowserLookUnderMasks	  on
+  BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
   VisualizeLoggedSignalsWhenLoggingToFile off
   PauseTimes		  "5"
@@ -188,6 +149,29 @@ Library {
   LinearizationMsg	  "none"
   Profile		  off
   ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    7
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "ad_block"
+    overrideMode_	    [0.0]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "ad_block"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
   ExtModeBatchMode	  off
   ExtModeEnableFloating	  on
   ExtModeTrigType	  "manual"
@@ -216,7 +200,7 @@ Library {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      12
+      $ObjectID		      8
       Version		      "1.17.0"
       DisabledProps	      []
       Description	      ""
@@ -224,7 +208,7 @@ Library {
 	Type			"Handle"
 	Dimension		10
 	Simulink.SolverCC {
-	  $ObjectID		  13
+	  $ObjectID		  9
 	  Version		  "1.17.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -264,7 +248,7 @@ Library {
 	  SampleTimeProperty	  []
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  14
+	  $ObjectID		  10
 	  Version		  "1.17.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -305,7 +289,7 @@ Library {
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  15
+	  $ObjectID		  11
 	  Version		  "1.17.0"
 	  Array {
 	    Type		    "Cell"
@@ -366,7 +350,7 @@ Library {
 	  BusAssignmentInplaceUpdate on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  16
+	  $ObjectID		  12
 	  Version		  "1.17.0"
 	  Array {
 	    Type		    "Cell"
@@ -476,7 +460,7 @@ Library {
 	  UnitDatabase		  ""
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  17
+	  $ObjectID		  13
 	  Version		  "1.17.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -524,7 +508,7 @@ Library {
 	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  18
+	  $ObjectID		  14
 	  Version		  "1.17.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -543,7 +527,7 @@ Library {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  19
+	  $ObjectID		  15
 	  Version		  "1.17.0"
 	  DisabledProps		  []
 	  Description		  ""
@@ -573,7 +557,7 @@ Library {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  20
+	  $ObjectID		  16
 	  Version		  "1.17.0"
 	  Array {
 	    Type		    "Cell"
@@ -656,7 +640,7 @@ Library {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      21
+	      $ObjectID		      17
 	      Version		      "1.17.0"
 	      Array {
 		Type			"Cell"
@@ -743,7 +727,7 @@ Library {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      22
+	      $ObjectID		      18
 	      Version		      "1.17.0"
 	      Array {
 		Type			"Cell"
@@ -839,7 +823,7 @@ Library {
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  23
+	  $ObjectID		  19
 	  Version		  "1.17.0"
 	  DisabledProps		  []
 	  Description		  "Simulink Coverage Configuration Component"
@@ -879,7 +863,7 @@ Library {
 	  CovMcdcMode		  "Masking"
 	}
 	hdlcoderui.hdlcc {
-	  $ObjectID		  24
+	  $ObjectID		  20
 	  Version		  "1.17.0"
 	  DisabledProps		  []
 	  Description		  "HDL Coder custom configuration component"
@@ -900,6 +884,20 @@ Library {
       ConfigPrmDlgPosition    [ 145, 177, 1135, 847 ]
     }
     PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    8
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    21
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+    AutoInsertRateTranBlk   [0]
   }
   ExplicitPartitioning	  off
   BlockDefaults {
@@ -955,48 +953,20 @@ Library {
   }
   BlockParameterDefaults {
     Block {
-      BlockType		      M-S-Function
-      DisplayMFileStacktrace  on
-    }
-    Block {
-      BlockType		      SubSystem
-      ShowPortLabels	      "FromPortIcon"
-      Permissions	      "ReadWrite"
-      PermitHierarchicalResolution "All"
-      TreatAsAtomicUnit	      off
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      SystemSampleTime	      "-1"
-      RTWSystemCode	      "Auto"
-      RTWFcnNameOpts	      "Auto"
-      RTWFileNameOpts	      "Auto"
-      FunctionInterfaceSpec   "void_void"
-      FunctionWithSeparateData off
-      RTWMemSecFuncInitTerm   "Inherit from model"
-      RTWMemSecFuncExecute    "Inherit from model"
-      RTWMemSecDataConstants  "Inherit from model"
-      RTWMemSecDataInternal   "Inherit from model"
-      RTWMemSecDataParameters "Inherit from model"
-      SimViewingDevice	      off
-      DataTypeOverride	      "UseLocalSettings"
-      DataTypeOverrideAppliesTo	"AllNumericTypes"
-      MinMaxOverflowLogging   "UseLocalSettings"
-      Opaque		      off
-      MaskHideContents	      off
-      SFBlockType	      "NONE"
-      GeneratePreprocessorConditionals off
-      PropagateVariantConditions off
-      TreatAsGroupedWhenPropagatingVariantConditions on
-      ContentPreviewEnabled   off
-      IsWebBlock	      off
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      Lockdown		      off
+      SampleTime	      "-1"
     }
   }
   System {
-    Name		    "MAIv2DAQ"
-    Location		    [-8, -8, 1928, 1058]
-    Open		    off
+    Name		    "ad_block"
+    Location		    [2149, 67, 3364, 891]
+    Open		    on
     PortBlocksUseCompactNotation off
-    ModelBrowserVisibility  on
+    ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
     PaperOrientation	    "landscape"
@@ -1006,269 +976,56 @@ Library {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "150"
+    ZoomFactor		    "125"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "14"
+    SIDHighWatermark	    "6"
     Block {
-      BlockType		      SubSystem
-      Name		      "Analog Input"
+      BlockType		      Display
+      Name		      "Display"
       SID		      "5"
-      Ports		      []
-      Position		      [90, 24, 215, 146]
-      ZOrder		      14
-      RequestExecContextInheritance off
-      Variant		      off
-      System {
-	Name			"Analog Input"
-	Location		[-8, -8, 1928, 1058]
-	Open			on
-	PortBlocksUseCompactNotation off
-	ModelBrowserVisibility	on
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"125"
-	Block {
-	  BlockType		  M-S-Function
-	  Name			  "Analog Input \n(Single Value)"
-	  SID			  "6"
-	  Ports			  [5, 1]
-	  Position		  [145, 34, 255, 106]
-	  ZOrder		  1
-	  FunctionName		  "AD_SingleValue"
-	  Parameters		  "Device, Channel, Oversampling, Gain, Polarity"
-	  Object {
-	    $PropName		    "MaskObject"
-	    $ObjectID		    25
-	    $ClassName		    "Simulink.Mask"
-	    Type		    "Analog Input (Single Value)"
-	    RunInitForIconRedraw    "off"
-	    Array {
-	      Type		      "Simulink.MaskParameter"
-	      Dimension		      5
-	      Object {
-		$ObjectID		26
-		Type			"edit"
-		Name			"Device"
-		Prompt			"Device "
-		Value			"0"
-		Tunable			"off"
-	      }
-	      Object {
-		$ObjectID		27
-		Type			"edit"
-		Name			"Channel"
-		Prompt			"Channel"
-		Value			"0"
-	      }
-	      Object {
-		$ObjectID		28
-		Type			"popup"
-		Array {
-		  Type			  "Cell"
-		  Dimension		  5
-		  Cell			  "disable"
-		  Cell			  "2"
-		  Cell			  "4"
-		  Cell			  "8"
-		  Cell			  "16"
-		  PropName		  "TypeOptions"
-		}
-		Name			"Oversampling"
-		Prompt			"Oversampling"
-		Value			"disable"
-	      }
-	      Object {
-		$ObjectID		29
-		Type			"popup"
-		Array {
-		  Type			  "Cell"
-		  Dimension		  4
-		  Cell			  "1"
-		  Cell			  "2"
-		  Cell			  "4"
-		  Cell			  "8"
-		  PropName		  "TypeOptions"
-		}
-		Name			"Gain"
-		Prompt			"Gain"
-		Value			"1"
-	      }
-	      Object {
-		$ObjectID		30
-		Type			"checkbox"
-		Name			"Polarity"
-		Prompt			"Bipolar"
-		Value			"on"
-		ReadOnly		"on"
-		Enabled			"off"
-	      }
-	      PropName		      "Parameters"
-	    }
-	    Array {
-	      Type		      "Simulink.dialog.Group"
-	      Dimension		      2
-	      Object {
-		$ObjectID		31
-		Prompt			"%<MaskType>"
-		Object {
-		  $PropName		  "DialogControls"
-		  $ObjectID		  32
-		  $ClassName		  "Simulink.dialog.Text"
-		  Prompt		  "%<MaskDescription>"
-		  Name			  "DescTextVar"
-		}
-		Name			"DescGroupVar"
-	      }
-	      Object {
-		$ObjectID		33
-		Prompt			"Simulink:studio:ToolBarParametersMenu"
-		Array {
-		  Type			  "Simulink.dialog.parameter.Control"
-		  Dimension		  5
-		  Object {
-		    $ObjectID		    34
-		    $ClassName		    "Simulink.dialog.parameter.Edit"
-		    PromptLocation	    "left"
-		    Name		    "Device"
-		  }
-		  Object {
-		    $ObjectID		    35
-		    $ClassName		    "Simulink.dialog.parameter.Edit"
-		    PromptLocation	    "left"
-		    Name		    "Channel"
-		  }
-		  Object {
-		    $ObjectID		    36
-		    $ClassName		    "Simulink.dialog.parameter.Popup"
-		    Name		    "Oversampling"
-		  }
-		  Object {
-		    $ObjectID		    37
-		    $ClassName		    "Simulink.dialog.parameter.Popup"
-		    Name		    "Gain"
-		  }
-		  Object {
-		    $ObjectID		    38
-		    $ClassName		    "Simulink.dialog.parameter.CheckBox"
-		    Name		    "Polarity"
-		  }
-		  PropName		  "DialogControls"
-		}
-		Name			"ParameterGroupVar"
-	      }
-	      PropName		      "DialogControls"
-	    }
-	  }
-	  Port {
-	    PortNumber		    1
-	    Name		    "Value"
-	  }
-	}
-	Block {
-	  BlockType		  M-S-Function
-	  Name			  "Level-2 MATLAB\nS-Function"
-	  SID			  "14"
-	  Ports			  [4, 1]
-	  Position		  [145, 183, 255, 257]
-	  ZOrder		  2
-	  FunctionName		  "AD_BlockValues"
-	  Parameters		  "Device, Channellist, Samplerate, Blocksize"
-	  Object {
-	    $PropName		    "MaskObject"
-	    $ObjectID		    39
-	    $ClassName		    "Simulink.Mask"
-	    RunInitForIconRedraw    "off"
-	    Array {
-	      Type		      "Simulink.MaskParameter"
-	      Dimension		      4
-	      Object {
-		$ObjectID		40
-		Type			"edit"
-		Name			"Device"
-		Prompt			"Device"
-		Value			"0"
-	      }
-	      Object {
-		$ObjectID		41
-		Type			"edit"
-		Name			"Channellist"
-		Prompt			"List of Channels to sample"
-		Value			"[0,1,2,3,4]"
-	      }
-	      Object {
-		$ObjectID		42
-		Type			"edit"
-		Name			"Samplerate"
-		Prompt			"Samplerate"
-		Value			"100"
-	      }
-	      Object {
-		$ObjectID		43
-		Type			"edit"
-		Name			"Blocksize"
-		Prompt			"Blocksize"
-		Value			"16"
-	      }
-	      PropName		      "Parameters"
-	    }
-	    Array {
-	      Type		      "Simulink.dialog.Control"
-	      Dimension		      6
-	      Object {
-		$ObjectID		44
-		$ClassName		"Simulink.dialog.Group"
-		Prompt			"%<MaskType>"
-		Object {
-		  $PropName		  "DialogControls"
-		  $ObjectID		  45
-		  $ClassName		  "Simulink.dialog.Text"
-		  Prompt		  "%<MaskDescription>"
-		  Name			  "DescTextVar"
-		}
-		Name			"DescGroupVar"
-	      }
-	      Object {
-		$ObjectID		46
-		$ClassName		"Simulink.dialog.Group"
-		Prompt			"Simulink:studio:ToolBarParametersMenu"
-		Name			"ParameterGroupVar"
-	      }
-	      Object {
-		$ObjectID		47
-		$ClassName		"Simulink.dialog.parameter.Edit"
-		PromptLocation		"left"
-		Name			"Device"
-	      }
-	      Object {
-		$ObjectID		48
-		$ClassName		"Simulink.dialog.parameter.Edit"
-		PromptLocation		"left"
-		Name			"Channellist"
-	      }
-	      Object {
-		$ObjectID		49
-		$ClassName		"Simulink.dialog.parameter.Edit"
-		PromptLocation		"left"
-		Name			"Samplerate"
-	      }
-	      Object {
-		$ObjectID		50
-		$ClassName		"Simulink.dialog.parameter.Edit"
-		PromptLocation		"left"
-		Name			"Blocksize"
-	      }
-	      PropName		      "DialogControls"
-	    }
-	  }
-	}
-      }
+      Ports		      [1]
+      Position		      [420, -5, 495, 15]
+      ZOrder		      20
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display1"
+      SID		      "6"
+      Ports		      [1]
+      Position		      [420, 40, 495, 60]
+      ZOrder		      21
+      Decimation	      "1"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Level-2 MATLAB\nS-Function"
+      SID		      "1"
+      Ports		      [4, 16]
+      Position		      [165, 23, 275, 187]
+      ZOrder		      3
+      LibraryVersion	      "1.16"
+      SourceBlock	      "MAIv2DAQ/Analog Input/Level-2 MATLAB\nS-Function"
+      SourceType	      ""
+      Device		      "0"
+      Channellist	      "[0,1,2,3,4]"
+      Samplerate	      "100"
+      Blocksize		      "16"
+    }
+    Line {
+      ZOrder		      5
+      SrcBlock		      "Level-2 MATLAB\nS-Function"
+      SrcPort		      1
+      Points		      [68, 0; 0, -25]
+      DstBlock		      "Display"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      6
+      SrcBlock		      "Level-2 MATLAB\nS-Function"
+      SrcPort		      3
+      DstBlock		      "Display1"
+      DstPort		      1
     }
   }
 }

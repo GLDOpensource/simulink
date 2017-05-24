@@ -1,7 +1,5 @@
 function block_AD_SingleValue(block)
-    % Parameters:
-    % 1: DeviceId
-    % 2: ChannelId
+    %
     mpath = mfilename('fullpath');
     mdir = fileparts(mpath);
     iodll = '\maiv2dll\MAI_v2_NET20_DLL.dll';
@@ -23,10 +21,21 @@ function setup(block)
     % values{4} = Gain
     % values{5} = Polarity
 
-    block.NumInputPorts  = 0;
+    block.NumInputPorts  = 5;
+    block.SetPreCompInpPortInfoToDynamic;
+    
     block.NumOutputPorts = 1;
+    block.SetPreCompOutPortInfoToDynamic;
+        
     
     % Setup port properties to be inherited or dynamic
+    
+    for i = 1:block.NumInputPorts
+        block.InputPort(i).DatatypeID = 0;
+        block.InputPort(i).Complexity  = 'Real';
+        block.InputPort(i).SamplingMode = 'Sample';
+        block.InputPort(i).Dimensions = 1;
+    end
     
     for i = 1:block.NumOutputPorts
         block.OutputPort(i).DatatypeID  = 0; % double
@@ -35,10 +44,11 @@ function setup(block)
         block.OutputPort(i).Dimensions = 1;
     end
     
-    block.SampleTimes = [0 1];
+    block.SampleTimes = [-1 0];
     
     block.NumDialogPrms = 5;
     block.DialogPrmsTunable = {'Nontunable','Nontunable','Nontunable','Nontunable','Nontunable'};
+    
     
     % Specify if Accelerator should use TLC or call back into 
     % MATLAB file
@@ -90,7 +100,7 @@ function DAQ_CheckParameters(block)
     prmOversampling = block.DialogPrm(3).Data;
     prmGain = block.DialogPrm(4).Data;
     prmPolarity = block.DialogPrm(5).Data;    
-    
+      
     if (prmDevice < 0) || (prmDevice > 16)
         error('invalid device id, it should be in range [0..15]');
     end
@@ -120,8 +130,6 @@ function DAQ_DoPostPropSetup(block)
     block.Dwork(1).Complexity      = 'Real';
     block.Dwork(1).UsedAsDiscState = true;
 %end DAQ_DoPostPropSetup
-
-import Goldammer.* 
 
 function DAQ_Start(block)
     prmDevice = block.DialogPrm(1).Data;
@@ -159,11 +167,19 @@ function DAQ_SetOutputPortSampleTime(block, idx, time)
 %end DAQ_SetOutputPortSampleTime
 
 function DAQ_Outputs(block)
+
     prmDevice = block.DialogPrm(1).Data;
     prmChannel = block.DialogPrm(2).Data;
     prmOversampling = block.DialogPrm(3).Data;
     prmGain = block.DialogPrm(4).Data;
     prmPolarity = block.DialogPrm(5).Data;
+
+    prmDevice = block.InputPort(1).Data;
+    prmChannel = block.InputPort(2).Data;
+    prmOversampling = block.InputPort(3).Data;
+    prmGain = block.InputPort(4).Data;
+    prmPolarity = block.InputPort(5).Data;
+    
     
     objDevice = Goldammer.MAI.GetDeviceByIndex(prmDevice); 
     if ~isempty(objDevice)
@@ -171,7 +187,11 @@ function DAQ_Outputs(block)
         if ~isempty(objChannel)
             value  = objChannel.ReadSingleVoltage(Goldammer.OversamplingMode.Disabled, Goldammer.GainFactor.Disabled, true);
             block.OutputPort(1).Data = transpose(value);
+        else
+            error('invalid channel number');
         end
+    else
+        error('invalid device id');
     end
 %end DAQ_Outputs
 

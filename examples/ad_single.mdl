@@ -6,7 +6,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.1"
+    ComputedModelVersion    "1.11"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -43,7 +43,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [205.0, 260.0, 814.0, 533.0]
+      Location		      [835.0, 155.0, 745.0, 847.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -58,18 +58,18 @@ Model {
 	$PropName		"ExplorerBarInfo"
 	$ObjectID		4
 	$ClassName		"Simulink.ExplorerBarInfo"
-	Visible			[1]
+	Visible			[0]
       }
       Object {
 	$PropName		"EditorsInfo"
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"4"
-	Extents			[760.0, 352.0]
-	ZoomFactor		[1.25]
-	Offset			[0.0, 0.0]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[691.0, 696.0]
+	ZoomFactor		[1.5646306163461716]
+	Offset			[-42.689986331070884, -37.37109375]
       }
       Object {
 	$PropName		"DockComponentsInfo"
@@ -89,11 +89,11 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAKwD///8AAAMeAAABmQAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
+      "QBjAHQAbwByAAAAAAD/////AAAAKwD///8AAALZAAAC0wAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
       "////wEAAAB5/////wAAAAAAAAAA/////wEAAADa/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAFT/////wAAAAAAAAAA/"
-      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAALA/////wAAAAAAAAAA/"
-      "////wEAAALv/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
+      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAJ7/////wAAAAAAAAAA/"
+      "////wEAAAKq/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
     }
   }
   HideAutomaticNames	  on
@@ -101,11 +101,11 @@ Model {
   Creator		  "Support"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Support"
+  LastModifiedBy	  "torsten"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri May 19 15:15:57 2017"
-  RTWModifiedTimeStamp	  417107703
-  ModelVersionFormat	  "1.%<AutoIncrement:1>"
+  LastModifiedDate	  "Wed May 24 08:40:28 2017"
+  RTWModifiedTimeStamp	  417514709
+  ModelVersionFormat	  "1.%<AutoIncrement:11>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -158,7 +158,7 @@ Model {
     $ObjectID		    7
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "ad_single"
-    overrideMode_	    [0U]
+    overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
@@ -953,6 +953,19 @@ Model {
   }
   BlockParameterDefaults {
     Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
       BlockType		      Display
       Format		      "short"
       Decimation	      "10"
@@ -963,8 +976,8 @@ Model {
   }
   System {
     Name		    "ad_single"
-    Location		    [205, 260, 1019, 793]
-    Open		    off
+    Location		    [835, 155, 1580, 1002]
+    Open		    on
     PortBlocksUseCompactNotation off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -976,36 +989,119 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "100"
+    ZoomFactor		    "156"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "4"
+    SIDHighWatermark	    "12"
     Block {
       BlockType		      Reference
-      Name		      "Analog Input\n(Single Value)"
-      SID		      "4"
-      Ports		      [0, 1]
-      Position		      [65, 145, 175, 205]
-      ZOrder		      17
-      LibraryVersion	      "1.6"
-      SourceBlock	      "MAIv2DAQ/Analog Input\n(Single Value)"
-      SourceType	      "SubSystem"
-      ContentPreviewEnabled   off
+      Name		      "Analog Input \n(Single Value)"
+      SID		      "12"
+      Ports		      [5, 1]
+      Position		      [125, 144, 235, 216]
+      ZOrder		      25
+      LibraryVersion	      "1.15"
+      SourceBlock	      "MAIv2DAQ/Analog Input/Analog Input \n(Single Value)"
+      SourceType	      "Analog Input (Single Value)"
+      Device		      "0"
+      Channel		      "0"
+      Oversampling	      "disable"
+      Gain		      "1"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Bipolar"
+      SID		      "11"
+      Position		      [-25, 310, 5, 340]
+      ZOrder		      24
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Channel"
+      SID		      "6"
+      Position		      [-25, 145, 5, 175]
+      ZOrder		      19
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Device"
+      SID		      "7"
+      Position		      [-25, 65, 5, 95]
+      ZOrder		      20
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Disable"
+      SID		      "9"
+      Position		      [-25, 220, 5, 250]
+      ZOrder		      22
+      Value		      "0"
     }
     Block {
       BlockType		      Display
       Name		      "Display"
       SID		      "2"
       Ports		      [1]
-      Position		      [285, 160, 375, 190]
+      Position		      [315, 170, 390, 190]
       ZOrder		      16
       Decimation	      "1"
     }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      SID		      "8"
+      Position		      [40, 95, 70, 125]
+      ZOrder		      21
+      IOType		      "siggen"
+    }
     Line {
-      ZOrder		      2
-      SrcBlock		      "Analog Input\n(Single Value)"
+      ZOrder		      14
+      SrcBlock		      "Analog Input \n(Single Value)"
       SrcPort		      1
       DstBlock		      "Display"
       DstPort		      1
+    }
+    Line {
+      ZOrder		      15
+      SrcBlock		      "Device"
+      SrcPort		      1
+      Points		      [55, 0; 0, 70]
+      DstBlock		      "Analog Input \n(Single Value)"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      16
+      SrcBlock		      "Channel"
+      SrcPort		      1
+      Points		      [25, 0; 0, 5]
+      DstBlock		      "Analog Input \n(Single Value)"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      17
+      SrcBlock		      "Disable"
+      SrcPort		      1
+      Points		      [55, 0; 0, -40]
+      Branch {
+	ZOrder			19
+	DstBlock		"Analog Input \n(Single Value)"
+	DstPort			4
+      }
+      Branch {
+	ZOrder			18
+	Points			[0, -15]
+	DstBlock		"Analog Input \n(Single Value)"
+	DstPort			3
+      }
+    }
+    Line {
+      ZOrder		      20
+      SrcBlock		      "Bipolar"
+      SrcPort		      1
+      Points		      [85, 0; 0, -115]
+      DstBlock		      "Analog Input \n(Single Value)"
+      DstPort		      5
     }
   }
 }
